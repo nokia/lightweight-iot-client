@@ -1,12 +1,12 @@
 # Wakaama
 
-Wakaama (formerly liblwm2m) is an implementation of the Open Mobile Alliance's LightWeight M2M
-protocol (LWM2M).
+Wakaama (formerly liblwm2m) is an implementation of the Open Mobile
+Alliance's LightWeight M2M protocol (LWM2M).
 
-Developers mailing list: https://dev.eclipse.org/mailman/listinfo/wakaama-dev
-
-## Badges
-[![Build](https://github.com/eclipse/wakaama/actions/workflows/build_and_test.yaml/badge.svg)](https://github.com/eclipse/wakaama/actions/workflows/build_and_test.yaml)
+Use the official GIT of Wakaama to do your development. This GIT
+provides a Wakaama version with predefined objects for water meters
+and it is for experimental use. This GIT has its focus on the lwm2m
+client.
 
 ## Source Layout
 
@@ -36,6 +36,21 @@ Developers mailing list: https://dev.eclipse.org/mailman/listinfo/wakaama-dev
           +- shared            (utility functions for connection handling and command-
                                 line interface)
 
+## Installation
+
+On a Raspberry-Pi clone the git to /home/pi
+
+### Dependencies and Tools
+
+Add the following software on the R-Pi:
+
+  - apt-get update -y
+  - apt-get install cmake
+  - apt-get install autoconf  
+  - apt-get install automake  
+  - apt-get install sqlite3
+  - apt-get install libsqlite3-dev
+  - pip install psutil
 
 ## Compiling
 
@@ -64,75 +79,11 @@ Several compilation switches are used:
 Depending on your platform, you need to define LWM2M_BIG_ENDIAN or LWM2M_LITTLE_ENDIAN.
 LWM2M_CLIENT_MODE and LWM2M_SERVER_MODE can be defined at the same time.
 
-## Development
+## Build Examples
 
-### Dependencies and Tools
-- Mandatory:
-  - Compiler: GCC and/or Clang
-- Optional (but strongly recommended):
-  - Build system generator: CMake 3.13+
-  - Version control system: Git (and a GitHub account)
-  - Git commit message linter: gitlint
-  - Build system: ninja
-  - C code formatting: clang-format, version 10
-  - Unit testing: CUnit
+ * Create a build directory and change to that, i.e.  cd  /home/pi/lightweight-iot-client
 
-On Ubuntu 20.04, used in CI, the dependencies can be installed as such:
-- `apt install build-essential clang-format clang-format-10 clang-tools-10 cmake gcovr git libcunit1-dev ninja-build python3-pip`
-- `pip3 install gitlint`
-
-### Code formatting
-New code must be formatted with [clang-format](https://clang.llvm.org/docs/ClangFormat.html).
-
-The style is based on the LLVM style, but with 4 instead of 2 spaces indentation and allowing for 120 instead of 80
-characters per line.
-
-To check if your code matches the expected style, the following commands are helpful:
- - `git clang-format-10 --diff`: Show what needs to be changed to match the expected code style
- - `git clang-format-10`: Apply all needed changes directly
- - `git clang-format-10 --commit master`: Fix code style for all changes since master
-
-If existing code gets reformatted, this must be done in a separate commit. Its commit id has to be added to the file
-`.git-blame-ignore-revs` and committed in yet another commit.
-
-### Running CI tests locally
-To avoid unneeded load on the GitHub infrastructure, please consider running `tools/ci/run_ci.sh --all` before pushing.
-
-### Running integration tests locally
-```
-cd wakaama
-tools/ci/run_ci.sh --run-build
-pytest -v tests/integration
-```
-
-## Examples
-
-There are some example applications provided to test the server, client and bootstrap capabilities of Wakaama.
-The following recipes assume you are on a unix like platform and you have cmake and make installed.
-
-### Server example
- * Create a build directory and change to that.
- * ``cmake [wakaama directory]/examples/server``
- * ``make``
- * ``./lwm2mserver [Options]``
-
-The lwm2mserver listens on UDP port 5683. It features a basic command line
-interface. Type 'help' for a list of supported commands.
-
-Options are:
-```
-Usage: lwm2mserver [OPTION]
-Launch a LWM2M server on localhost.
-
-Options:
-  -4		Use IPv4 connection. Default: IPv6 connection
-  -l PORT	Set the local UDP port of the Server. Default: 5683
-  -S BYTES	CoAP block size. Options: 16, 32, 64, 128, 256, 512, 1024. Default: 1024
-```
-
-### Test client example
- * Create a build directory and change to that.
- * ``cmake [wakaama directory]/examples/client``
+ * ``cmake ./examples/client``
  * ``make``
  * ``./lwm2mclient [Options]``
 
@@ -145,11 +96,14 @@ You need to install autoconf and automake to build with tinydtls.
 
 Build with tinydtls:
  * Create a build directory and change to that.
- * ``cmake -DDTLS=1 [wakaama directory]/examples/client``
+ * ``cmake -DDTLS=1 ./examples/client``
  * ``make``
  * ``./lwm2mclient [Options]``
 
-The lwm2mclient features nine LWM2M objects:
+## Wamaama objects
+
+The lwm2mclient features 9 standard LWM2M objects:
+
  - Security Object (id: 0)
  - Server Object (id: 1)
  - Access Control Object (id: 2) as a skeleton
@@ -172,68 +126,62 @@ The lwm2mclient features nine LWM2M objects:
            exec |  2 |     E      |    No     |    Yes    |         |       |
            dec  |  3 |    R/W     |    No     |    Yes    |  Float  |       |
 
-The lwm2mclient opens udp port 56830 and tries to register to a LWM2M Server at
-127.0.0.1:5683. It features a basic command line interface. Type 'help' for a
-list of supported commands.
+The lwm2mclient features 2 LWM2M objects for temperature and pressure:
 
-Options are:
-```
-Usage: lwm2mclient [OPTION]
-Launch a LWM2M client.
-Options:
-  -n NAME	Set the endpoint name of the Client. Default: testlwm2mclient
-  -l PORT	Set the local UDP port of the Client. Default: 56830
-  -h HOST	Set the hostname of the LWM2M Server to connect to. Default: localhost
-  -p PORT	Set the port of the LWM2M Server to connect to. Default: 5683
-  -4		Use IPv4 connection. Default: IPv6 connection
-  -t TIME	Set the lifetime of the Client. Default: 300
-  -b		Bootstrap requested.
-  -c		Change battery level over time.
-  -S BYTES	CoAP block size. Options: 16, 32, 64, 128, 256, 512, 1024. Default: 1024
+ - Object: 3303    Instances: 1  Resourcelist: 5601,5602,5603,5604,5605,5700,5701
+ - Object: 3304    Instances: 1  Resourcelist: 5601,5602,5603,5604,5605,5700,5701
 
-```
+The lwm2mclient features 19 LWM2M objects related to water meters
 
-If DTLS feature enable:
-```
-  -i Set the device management or bootstrap server PSK identity. If not set use none secure mode
-  -s Set the device management or bootstrap server Pre-Shared-Key. If not set use none secure mode
-```
+ - Object: 10266   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
+ - Object: 10267   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
+ - Object: 10268   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
+ - Object: 10269   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
+ - Object: 10270   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
+ - Object: 10271   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
+ - Object: 10272   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10273   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10274   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10275   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10276   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10277   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10278   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10279   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10280   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10281   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10282   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10283   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
+ - Object: 10284   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
 
-To launch a bootstrap session:
-``./lwm2mclient -b``
 
-### Simpler test client example
+## Sensor data
 
-In the any directory, run the following commands:
- * Create a build directory and change to that.
- * ``cmake [wakaama directory]/examples/lightclient``
- * ``make``
- * ``./lightclient [Options]``
+Visit the directory sqlite3 where you will find the file structure_db.
+The default serial number is urn:H2O:meter-1. PLease change this
+serial to your preferred device identity.  
+Run the create_db in this direcoty to generate a new local sqlite3
+database.
 
-The lightclient is much simpler that the lwm2mclient and features only four
-LWM2M objects:
- - Security Object (id: 0)
- - Server Object (id: 1)
- - Device Object (id: 3) containing hard-coded values from the Example LWM2M
- Client of Appendix E of the LWM2M Technical Specification.
- - Test Object (id: 31024) from the lwm2mclient as described above.
+## Sensor gets a trigger based on a database change
 
-The lightclient does not feature any command-line interface.
+This client reads from the local sqlite3 database. The client checks
+for any database entry where the flag 'upd' of a record is set to '1'.
+If so, the client reads the data and resets the value back to '0'.
+The client will then submit the change to the lwm2m server if there is
+a subscription for this object resource.
 
-Options are:
-```
-Usage: lwm2mclient [OPTION]
-Launch a LWM2M client.
-Options:
-  -n NAME	Set the endpoint name of the Client. Default: testlightclient
-  -l PORT	Set the local UDP port of the Client. Default: 56830
-  -4		Use IPv4 connection. Default: IPv6 connection
-  -S BYTES	CoAP block size. Options: 16, 32, 64, 128, 256, 512, 1024. Default: 1024
-```
-### Bootstrap Server example
- * Create a build directory and change to that.
- * ``cmake [wakaama directory]/examples/bootstrap_server``
- * ``make``
- * ``./bootstrap_server [Options]``
+## Generate sensor data
 
-Refer to [examples/bootstrap_server/README](./examples/bootstrap_server/README) for more information.
+In the directory ./python, you will find the script called gen_data.  Edit this
+script when the default serial number must be updated.  This script
+reads the R-Pi cpu temperature, cpu occupation, virtual memory and
+generate some parameters based on random values. Its just to make
+changes to the database as mentioned in the previous section.  
+
+Run the 'gen_data' separately. In practice, such a script will read your real sensors instead of artificial data.
+
+
+
+
+
+
