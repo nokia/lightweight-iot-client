@@ -1,0 +1,4 @@
+/home/pi/lightweight-iot-client/CMakeFiles/edit_cache.dir
+/home/pi/lightweight-iot-client/CMakeFiles/rebuild_cache.dir
+/home/pi/lightweight-iot-client/CMakeFiles/submodule_update.dir
+/home/pi/lightweight-iot-client/CMakeFiles/lwm2mclient.dir

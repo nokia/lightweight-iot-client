@@ -1,0 +1,37 @@
+
+# Start the Wakaama client
+#
+# do_leshan  <serialnumber>
+#
+
+if [ "$1" = "" ]
+then
+  echo "Usage:    do_leshan  <serialnumber>"
+  echo ""  
+  echo "Example:  do_leshan  urn:H2O:meter-1"
+  echo ""  
+  echo "Checkout: leshan.eclipseprojects.io"
+  exit
+fi
+
+echo ""
+
+# Device identity
+SERIALNBR=$1
+
+# Local port
+rand=`shuf -i 1-1000 -n 1`
+base=14000
+LOCALPORT=$((base+rand))
+
+# Server address and port
+SERVERADDR=leshan.eclipseprojects.io
+SERVERPORT=5683
+
+# Compose the command
+CMD="./lwm2mclient -4 -n $SERIALNBR  -h $SERVERADDR -p $SERVERPORT -l $LOCALPORT"
+
+echo $CMD
+
+# Execute the constructed command
+$CMD

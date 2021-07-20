@@ -1,0 +1,48 @@
+
+[1]  Update the ./doget script to obtain the registry in .xml
+
+     ./doget
+
+[2]  Execute the convert script, for example:
+
+     grep -E "<Item ID=|<Type>" 3303.xml | ./conv > 3303.dat
+
+[3]  Edit the output file to following line as example:
+
+     # Active, object, number of instances, resources ; types per resources ; default values
+     #
+     # Types:
+     #
+     # f = float
+     # s = string
+     # i = integer
+     # b = boolean
+     # t = timestamp
+     # e = executable
+     # o = opaque
+     
+     # Example temperature:
+     #
+     # /3303/0/5601  -  Min Measured Value (f)
+     # /3303/0/5602  -  Max Measured Value (f)
+     # /3303/0/5603  -  Min Range Value    (f) 
+     # /3303/0/5604  -  Max Range Value    (f)
+     # /3303/0/5605  -  Reset Min and Max Measured Values (e)
+     # /3303/0/5700  -  Sensor Value       (f) 
+     # /3303/0/5701  -  Sensor Units       (Celcius) 
+
+     # Temperature
+     1,3303,1,5601,5602,5603,5604,5605,5700,5701;  'f','f','f','f','e','f','s';  "0","0","-10","300","exec","0","Celcius"
+     
+     # Humidity
+     1,3304,1,5601,5602,5603,5604,5605,5700,5701;  'f','f','f','f','e','f','s';  "0","0","0","100","exec","0","%"
+     
+     # Water meter     
+     1,10266,1,6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029; 'i','i','s','t','t','t','t','b','e','o','e','e','e','i','o'; "100","1","2","t","t","t","t","false","e","0","e","e","e","9","0"
+
+[4]  Add the above line(s) in example/client/object.in
+
+[5]  Run object.gen
+
+
+     

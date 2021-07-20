@@ -1,0 +1,14 @@
+
+sqlite3 database.sqlite3
+
+create table sensors (snid text, object number, instance number, resource number, value float, upd boolean);
+insert into  sensors (snid, object, instance, resource, value, upd) values ("urn:SKU:xiot-6000",3303,0,5700, 3303, 1);
+insert into  sensors (snid, object, instance, resource, value, upd) values ("urn:SKU:xiot-6000",3320,0,5700, 3320, 1);
+insert into  sensors (snid, object, instance, resource, value, upd) values ("urn:SKU:xiot-6000",3321,0,5700, 3321, 1);
+
+update sensors set upd=1, value=123 where snid="urn:SKU:xiot-6000" and instance='0' and resource='5700';
+
+select * from sensors;
+
+
+

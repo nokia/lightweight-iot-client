@@ -1,0 +1,30 @@
+            <Item ID="6011">
+                <Type>Integer</Type>
+            <Item ID="6012">
+                <Type>Boolean</Type>
+            <Item ID="6013">
+                <Type>Boolean</Type>
+            <Item ID="6014">
+                <Type>Float</Type>
+            <Item ID="6015">
+                <Type>Integer</Type>
+            <Item ID="6016">
+                <Type>Float</Type>
+            <Item ID="6017">
+                <Type>Integer</Type>
+            <Item ID="6018">
+                <Type>Integer</Type>
+            <Item ID="6019">
+                <Type>Integer</Type>
+            <Item ID="6020">
+                <Type>Time</Type>
+            <Item ID="6021">
+                <Type>Time</Type>
+            <Item ID="6022">
+                <Type></Type>
+            <Item ID="6023">
+                <Type>Boolean</Type>
+            <Item ID="6024">
+                <Type>Integer</Type>
+            <Item ID="6025">
+                <Type>Opaque</Type>

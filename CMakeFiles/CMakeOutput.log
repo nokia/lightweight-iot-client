@@ -1,0 +1,285 @@
+The system is: Linux - 5.4.51-v7+ - armv7l
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/pi/lightweight-iot-client/CMakeFiles/3.13.4/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d38e8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d38e8.dir/build.make CMakeFiles/cmTC_d38e8.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d38e8.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d38e8.dir/testCCompiler.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d38e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d38e8.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d38e8.dir/testCCompiler.c.o  -o cmTC_d38e8 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6c2b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a6c2b.dir/build.make CMakeFiles/cmTC_a6c2b.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a6c2b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6c2b.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o  -o cmTC_a6c2b 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a6c2b'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjSKqkw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_a6c2b /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a6c2b'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a6c2b/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a6c2b.dir/build.make CMakeFiles/cmTC_a6c2b.dir/build]
+  ignore line: [make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a6c2b]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6c2b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o  -o cmTC_a6c2b ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a6c2b'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjSKqkw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_a6c2b /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccjSKqkw.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a6c2b] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [CMakeFiles/cmTC_a6c2b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/8;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_311d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_311d5.dir/build.make CMakeFiles/cmTC_311d5.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_311d5.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_311d5.dir/feature_tests.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/feature_tests.c
+Linking C executable cmTC_311d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_311d5.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_311d5.dir/feature_tests.c.o  -o cmTC_311d5 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_55f90/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55f90.dir/build.make CMakeFiles/cmTC_55f90.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55f90.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_55f90.dir/feature_tests.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/feature_tests.c
+Linking C executable cmTC_55f90
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55f90.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_55f90.dir/feature_tests.c.o  -o cmTC_55f90 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3d2bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3d2bb.dir/build.make CMakeFiles/cmTC_3d2bb.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d2bb.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_3d2bb.dir/feature_tests.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3d2bb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d2bb.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3d2bb.dir/feature_tests.c.o  -o cmTC_3d2bb 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_21137/fast"
+/usr/bin/make -f CMakeFiles/cmTC_21137.dir/build.make CMakeFiles/cmTC_21137.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21137.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_21137.dir/CheckIncludeFile.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_21137
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21137.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_21137.dir/CheckIncludeFile.c.o  -o cmTC_21137 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cebb6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cebb6.dir/build.make CMakeFiles/cmTC_cebb6.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cebb6.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cebb6.dir/CheckIncludeFile.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cebb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cebb6.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cebb6.dir/CheckIncludeFile.c.o  -o cmTC_cebb6 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_95a44/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95a44.dir/build.make CMakeFiles/cmTC_95a44.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_95a44.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_95a44.dir/CheckIncludeFile.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_95a44
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95a44.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_95a44.dir/CheckIncludeFile.c.o  -o cmTC_95a44 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e8663/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e8663.dir/build.make CMakeFiles/cmTC_e8663.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e8663.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e8663.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_e8663
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8663.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e8663.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_e8663 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_edbd3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_edbd3.dir/build.make CMakeFiles/cmTC_edbd3.dir/build
+make[1]: Entering directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edbd3.dir/TestEndianess.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_edbd3.dir/TestEndianess.c.o   -c /home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_edbd3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edbd3.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_edbd3.dir/TestEndianess.c.o  -o cmTC_edbd3 
+make[1]: Leaving directory '/home/pi/lightweight-iot-client/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+

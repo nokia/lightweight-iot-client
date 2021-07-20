@@ -1,0 +1,30 @@
+            <Item ID="6000">
+                <Type>Integer</Type>
+            <Item ID="6001">
+                <Type>Integer</Type>
+            <Item ID="6002">
+                <Type>String</Type>
+            <Item ID="6003">
+                <Type>Time</Type>
+            <Item ID="6004">
+                <Type>Time</Type>
+            <Item ID="6005">
+                <Type>Time</Type>
+            <Item ID="6006">
+                <Type>Time</Type>
+            <Item ID="6007">
+                <Type>Boolean</Type>
+            <Item ID="6008">
+                <Type></Type>
+            <Item ID="6009">
+                <Type>Opaque</Type>
+            <Item ID="6010">
+                <Type></Type>
+            <Item ID="6026">
+                <Type></Type>
+            <Item ID="6027">
+                <Type></Type>
+            <Item ID="6028">
+                <Type>Integer</Type>
+            <Item ID="6029">
+                <Type>Opaque</Type>

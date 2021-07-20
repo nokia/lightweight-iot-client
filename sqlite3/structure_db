@@ -1,0 +1,71 @@
+
+
+create table sensors (snid text, object number, instance number, resource number, value string, upd boolean);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",3303,0,5700, "0", 0);
+       
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",3323,0,5601, "0", 0);
+       
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10266,0,6029, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10267,0,6029, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10268,0,6029, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10269,0,6029, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10270,0,6029, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10271,0,6029, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10272,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10273,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10274,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10275,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10276,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10277,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10278,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10279,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10280,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10281,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10282,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10283,0,6025, "0", 0);
+
+insert into  sensors (snid, object, instance, resource, value, upd) values
+       ("urn:H2O:meter-1",10284,0,6025, "0", 0);
+
+
+
+select * from sensors;
+

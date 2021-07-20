@@ -1,0 +1,2 @@
+ sed "s/<Item ID=\"//g" | sed "s/\">//g" | sed "s/<Type>/_/g" | sed "s/<\/Type>//g" | sed "s/ //g" | sed "s/_Integer/'i'/g" | sed "s/_String/'s'/g" | sed "s/_Time/'t'/g" | sed "s/_Boolean/'b'/g" | sed "s/_Opaque/'o'/g" | sed "s/_Float/'f'/g" | sed "s/_/'e'/g"
+

@@ -1,0 +1,30 @@
+
+Readme:
+
+[1]  Edit the object.in file and define the objects and resources that belongs to them.
+
+[2]  Generate the object_mysql_<index>.c and .h files with the object.gen script
+
+[3]  Check for any changes to make in the CMakeLists.txt and lwm2mclient.c files
+
+     Remove any line that is not required, for example :
+
+     ${CMAKE_CURRENT_LIST_DIR}/object_mysql_4.c
+
+[4]  Update the number of object in the file:  examples/client/lwm2mclient.c
+
+     #define OBJ_COUNT 10   (8 objects are defual, add the number of  objects added)
+     
+     You can also simply run [5] which will tell you the right number to use.
+
+[4]  In wamaaka_wm,  build wakaama:  
+
+     cmake -DLWM2M_BOOTSTRAP=1  -DLOG -DLWM2M_WITH_LOGS -DWITH_LOGS -DLWM2M_VERSION=1.0 -DLWM2M_SUPPORT_SENML_JSON=0 -DLWM2M_SUPPORT_JSON=0 -DDTLS=1 examples/client
+
+     The bove line is also in:  ./mymake
+
+
+
+
+- Dirk Gooris    dirk.gooris@nokia.com     February  23,  2021    Nijkerk (Gld)
+

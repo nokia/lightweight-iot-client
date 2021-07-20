@@ -1,0 +1,25 @@
+
+
+wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/3303.xml
+wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/3304.xml
+
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10266.xml
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10267.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10268.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10269.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10270.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10271.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10272.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10273.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10274.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10275.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10276.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10277.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10278.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10279.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10280.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10281.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10282.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10283.xml 
+# wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/10284.xml 
+# 

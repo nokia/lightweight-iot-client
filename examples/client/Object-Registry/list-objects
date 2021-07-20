@@ -1,0 +1,19 @@
+10266        Water Flow Readings
+10267        Daily Maximum Flow Rate Readings
+10268        Temperature Readings
+10269        Pressure Readings
+10270        Battery Level Readings
+10271        Communications Activity Time Readings
+10272        Water Meter Customer Leakage Alarm
+10273        Water Meter Reverse Flow Alarm
+10274        Water Meter Empty Pipe Alarm
+10275        Water Meter Tamper Alarm
+10276        Water Meter High Pressure Alarm
+10277        Water Meter Low Pressure Alarm
+10278        High Temperature Alarm
+10279        Low Temperature Alarm
+10280        Water Network Leak Alarm
+10281        Low Battery Alarm
+10282        Daughter Board Failure Alarm
+10283        Device Reboot Event
+10284        Time Synchronisation Event

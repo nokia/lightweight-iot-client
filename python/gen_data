@@ -1,0 +1,117 @@
+#!/usr/bin/python
+
+# pip install psutil
+
+import os
+import time
+import sqlite3
+import psutil
+import random
+
+from gpiozero import CPUTemperature
+
+serialNumber='urn:H2O:meter-1'
+
+def updateDatabase(lwobject,instance,resource,value):
+    conn = sqlite3.connect('../sqlite3/database.sqlite3')
+    c = conn.cursor()
+    
+    query = ''' update sensors set upd=1, value=''' + value + ''' where ''' \
+            ''' snid="'''    + serialNumber + '''" and ''' \
+            ''' object='''   + lwobject     + '''  and ''' \
+            ''' instance=''' + instance     + '''  and ''' \
+            ''' resource=''' + resource     + '''  '''
+
+    print("query:"  + query)
+    
+    c.execute(query)
+    conn.commit()
+    conn.close()
+
+# Get the CPU Usage
+cpu_usage = psutil.cpu_percent()
+
+# Get the RAM Usage
+ram_usage = psutil.virtual_memory().percent
+
+# ---------------------------------------------------------------------------------
+    
+v3303=35
+v10266=2.4
+v10267=18647
+v10268=8.3
+v10269=3.1
+v10270=95
+v10271=183
+
+dir=1
+change=0
+rnd=0.9
+index=2
+
+def switch_index(argument):
+    switcher = {
+        10266: v10266,
+        10267: v10267,
+        10268: v10268,
+        10269: v10269,
+        10270: v10270,
+        10271: v10271
+    }
+    return switcher.get(argument)
+
+while True:
+    
+    # Depending on the directior, increase of decreas values
+    if dir == 1:
+            v10266+=0.1
+            v10268+=0.1
+            v10269+=0.1
+
+    if dir == 0:
+            v10266-=0.1
+            v10268-=0.1
+            v10269-=0.1
+
+    # Some variables always increase (total water usage) or decrease (battery)
+    v10267+=0.1
+    v10270-=0.1
+    v10271+=0.2
+
+    # Choose a random object and update its resource
+    index = random.randrange(10266, 10272, 1)    
+    value = switch_index(index);
+    updateDatabase(str(index),'0','6029',str(value))
+
+    if change == 1 or change == 4 or change == 7 or change == 10 or change == 12 or change == 15 or change == 17 or change == 18 or change == 19:
+       updateDatabase('10272','0','6025',str(round(random.uniform(0, 1))))
+       
+    if change == 2 or change == 5 or change == 6 or change == 9 or change == 11 or change == 14 or change == 18 or change == 19:
+       updateDatabase('10277','0','6025',str(round(random.uniform(0, 1))))
+
+    if change == 8:
+       updateDatabase('10280','0','6025',str("1"))
+
+    if change == 10:
+       updateDatabase('10280','0','6025',str("0"))
+
+    # Add also the CPU temperature to generate a chart
+    if change == 3 or change == 12 or change == 16:
+       cpu_temp  = CPUTemperature()
+       updateDatabase('3303','0','5700',str(cpu_temp.temperature))
+
+
+    # Control on values getting higher or lower 
+    change+=1
+    if change == 20:
+       if dir == 1:
+          dir = 0
+       else:
+          dir = 1
+       change=0
+
+    
+    # Wait a moment
+    time.sleep(9)
+
+    print(" ")

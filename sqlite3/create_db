@@ -1,0 +1,4 @@
+
+
+rm -f database.sqlite3
+cat structure_db | sqlite3 database.sqlite3

@@ -1,0 +1,168 @@
+<?xmlversion="1.0"encoding="UTF-8"?>
+
+<!--BSD-3ClauseLicense
+
+Copyright2019OpenMobileAlliance.
+
+Redistributionanduseinsourceandbinaryforms,withorwithout
+modification,arepermittedprovidedthatthefollowingconditions
+aremet:
+
+1.Redistributionsofsourcecodemustretaintheabovecopyright
+notice,thislistofconditionsandthefollowingdisclaimer.
+2.Redistributionsinbinaryformmustreproducetheabovecopyright
+notice,thislistofconditionsandthefollowingdisclaimerinthe
+documentationand/orothermaterialsprovidedwiththedistribution.
+3.Neitherthenameofthecopyrightholdernorthenamesofits
+contributorsmaybeusedtoendorseorpromoteproductsderived
+fromthissoftwarewithoutspecificpriorwrittenpermission.
+
+THISSOFTWAREISPROVIDEDBYTHECOPYRIGHTHOLDERSANDCONTRIBUTORS
+"ASIS"ANDANYEXPRESSORIMPLIEDWARRANTIES,INCLUDING,BUTNOT
+LIMITEDTO,THEIMPLIEDWARRANTIESOFMERCHANTABILITYANDFITNESS
+FORAPARTICULARPURPOSEAREDISCLAIMED.INNOEVENTSHALLTHE
+COPYRIGHTHOLDERORCONTRIBUTORSBELIABLEFORANYDIRECT,INDIRECT,
+INCIDENTAL,SPECIAL,EXEMPLARY,ORCONSEQUENTIALDAMAGES(INCLUDING,
+BUTNOTLIMITEDTO,PROCUREMENTOFSUBSTITUTEGOODSORSERVICES;
+LOSSOFUSE,DATA,ORPROFITS;ORBUSINESSINTERRUPTION)HOWEVER
+CAUSEDANDONANYTHEORYOFLIABILITY,WHETHERINCONTRACT,STRICT
+LIABILITY,ORTORT(INCLUDINGNEGLIGENCEOROTHERWISE)ARISINGIN
+ANYWAYOUTOFTHEUSEOFTHISSOFTWARE,EVENIFADVISEDOFTHE
+POSSIBILITYOFSUCHDAMAGE.
+-->
+
+<LWM2Mxmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd
+	<ObjectObjectType="MODefinition
+		<Name>Humidity</Name>
+		<Description1>ThisIPSOobjectshouldbeusedwithahumiditysensortoreportahumiditymeasurement.Italsoprovidesresourcesforminimum/maximummeasuredvaluesandtheminimum/maximumrangethatcanbemeasuredbythehumiditysensor.Anexamplemeasurementunitisrelativehumidityasapercentage.</Description1>
+		<ObjectID>3304</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3304:1.1</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.1</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			5700
+				<Name>SensorValue</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				'f'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>LastorCurrentMeasuredValuefromtheSensor.</Description>
+			</Item>
+			5601
+				<Name>MinMeasuredValue</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'f'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>TheminimumvaluemeasuredbythesensorsincepowerONorreset.</Description>
+			</Item>
+			5602
+				<Name>MaxMeasuredValue</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'f'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>ThemaximumvaluemeasuredbythesensorsincepowerONorreset.</Description>
+			</Item>
+			5603
+				<Name>MinRangeValue</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'f'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Theminimumvaluethatcanbemeasuredbythesensor.</Description>
+			</Item>
+			5604
+				<Name>MaxRangeValue</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'f'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Themaximumvaluethatcanbemeasuredbythesensor.</Description>
+			</Item>
+			5701
+				<Name>SensorUnits</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				's'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>MeasurementUnitsDefinition.</Description>
+			</Item>
+			5605
+				<Name>ResetMinandMaxMeasuredValues</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'e'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>ResettheMinandMaxMeasuredValuestoCurrentValue.</Description>
+			</Item>
+			5750
+				<Name>ApplicationType</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				's'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Theapplicationtypeofthesensororactuatorasastringdependingontheusecase.</Description>
+			</Item>
+			5518
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				't'
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Thetimestampofwhenthemeasurementwasperformed.</Description>
+			</Item>
+			6050
+				<Name>FractionalTimestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'f'
+				<RangeEnumeration>0..1</RangeEnumeration>
+				<Units>s</Units>
+				<Description>Fractionalpartofthetimestampwhensub-secondprecisionisused(e.g.,0.23for230ms).</Description>
+			</Item>
+			6042
+				<Name>MeasurementQualityIndicator</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'i'
+				<RangeEnumeration>0..23</RangeEnumeration>
+				<Units></Units>
+				<Description>Measurementqualityindicatorreportedbyasmartsensor.0:UNCHECKEDNoqualitychecksweredonebecausetheydonotexistorcannotbeapplied.1:REJECTEDWITHCERTAINTYThemeasuredvalueisinvalid.2:REJECTEDWITHPROBABILITYThemeasuredvalueislikelyinvalid.3:ACCEPTEDBUTSUSPICIOUSThemeasuredvalueislikelyOK.4:ACCEPTEDThemeasuredvalueisOK.5-15:Reservedforfutureextensions.16-23:Vendorspecificmeasurementquality.</Description>
+			</Item>
+			6049
+				<Name>MeasurementQualityLevel</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				'i'
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units></Units>
+				<Description>Measurementqualitylevelreportedbyasmartsensor.Qualitylevel100meansthatthemeasurementhasfullypassedqualitycheckalgorithms.Smallerqualitylevelsmeanthatqualityhasdecreasedandthemeasurementhasonlypartiallypassedqualitycheckalgorithms.Thesmallerthequalitylevel,themorecautionshouldbeusedbytheapplicationwhenusingthemeasurement.Whenthequalitylevelis0itmeansthatthemeasurementshouldcertainlyberejected.</Description>
+			</Item>
+		</Resources>
+		<Description2></Description2>
+	</Object>
+</LWM2M>

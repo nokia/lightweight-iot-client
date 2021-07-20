@@ -1,0 +1,35 @@
+
+
+{
+  "criteria": {
+    "serialNumbers": [
+      "{{{payload.serialNumber}}}"
+    ]
+  },
+  "deletionPolicy": 0,
+  "groupName": "{{{payload.groupName}}}",
+  "resources": [
+      {"resourcePath": "3303/0/5700"},
+      {"resourcePath": "3323/0/5601"},
+      {"resourcePath": "10266/0/6029"},
+      {"resourcePath": "10267/0/6029"},
+      {"resourcePath": "10268/0/6029"},
+      {"resourcePath": "10269/0/6029"},
+      {"resourcePath": "10270/0/6029"},
+      {"resourcePath": "10271/0/6029"},
+      {"resourcePath": "10272/0/6025"},
+      {"resourcePath": "10273/0/6025"},
+      {"resourcePath": "10274/0/6025"},
+      {"resourcePath": "10275/0/6025"},
+      {"resourcePath": "10276/0/6025"},
+      {"resourcePath": "10277/0/6025"},
+      {"resourcePath": "10278/0/6025"},
+      {"resourcePath": "10279/0/6025"},
+      {"resourcePath": "10280/0/6025"},
+      {"resourcePath": "10281/0/6025"},
+      {"resourcePath": "10282/0/6025"},
+      {"resourcePath": "10283/0/6025"},
+      {"resourcePath": "10284/0/6025"}
+    ],
+  "subscriptionType": "resources"
+}
