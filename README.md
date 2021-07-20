@@ -133,31 +133,30 @@ The lwm2mclient features 2 LWM2M objects for temperature and pressure:
 
 The lwm2mclient features 19 LWM2M objects related to water meters
 
- - Object: 10266   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
- - Object: 10267   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
- - Object: 10268   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
- - Object: 10269   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
- - Object: 10270   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
- - Object: 10271   Instances: 1  Resourcelist: 6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6026,6027,6028,6029
- - Object: 10272   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10273   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10274   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10275   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10276   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10277   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10278   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10279   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10280   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10281   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10282   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10283   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
- - Object: 10284   Instances: 1  Resourcelist: 6011,6012,6013,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025
-
+ - Object: 10266   Instances: 1  Resourcelist: 6000 - 6010,6026,6027,6028,6029
+ - Object: 10267   Instances: 1  Resourcelist: 6000 - 6010,6026,6027,6028,6029
+ - Object: 10268   Instances: 1  Resourcelist: 6000 - 6010,6026,6027,6028,6029
+ - Object: 10269   Instances: 1  Resourcelist: 6000 - 6010,6026,6027,6028,6029
+ - Object: 10270   Instances: 1  Resourcelist: 6000 - 6010,6026,6027,6028,6029
+ - Object: 10271   Instances: 1  Resourcelist: 6000 - 6010,6026,6027,6028,6029
+ - Object: 10272   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10273   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10274   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10275   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10276   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10277   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10278   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10279   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10280   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10281   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10282   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10283   Instances: 1  Resourcelist: 6011 - 6025
+ - Object: 10284   Instances: 1  Resourcelist: 6011 - 6025
 
 ## Sensor data
 
 Visit the directory sqlite3 where you will find the file structure_db.
-The default serial number is urn:H2O:meter-1. PLease change this
+The default serial number is urn:H2O:meter-1. Please change this
 serial to your preferred device identity.  
 Run the create_db in this direcoty to generate a new local sqlite3
 database.
