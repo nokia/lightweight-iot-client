@@ -179,8 +179,8 @@ changes to the database as mentioned in the previous section.
 
 Run the 'gen_data' separately. In practice, such a script will read your real sensors instead of artificial data.
 
+## The Concept of Sensor, database and the Wakaama client
 
+The following images shows the concept:
 
-
-
-
+![Alt text](images/Wakaama-rpi.png?raw=true "Title")
