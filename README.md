@@ -99,12 +99,17 @@ Install the lightweight-iot-client on ``/home/pi``
 
 ``make``
 
-or when you want to add parameters for compilation, see the following as an example.  Please refer to the Wakaama distribution for details.
+When you want to add parameters during compilation, use ``cmake`` with
+``-D`` parameters. Please refer to the Wakaama distribution for details.
 
-cmake -DLWM2M_BOOTSTRAP=1  -DLOG -DLWM2M_WITH_LOGS -DWITH_LOGS -DLWM2M_VERSION=1.0 -DLWM2M_SUPPORT_SENML_JSON=0 -DLWM2M_SUPPORT_JSON=0 -DDTLS=1 examples/client
+Example:
 
-If you would execute a a make clean, then you might experience issues with the DTLS portion. Go to examples/shared and remove the tinydtls and clone tinydtls again as above.
+``cmake -DLWM2M_BOOTSTRAP=1  -DLOG -DLWM2M_WITH_LOGS -DWITH_LOGS -DLWM2M_VERSION=1.0 -DLWM2M_SUPPORT_SENML_JSON=0 -DLWM2M_SUPPORT_JSON=0 -DDTLS=1 examples/client``
 
+If you would execute a a ``make clean``, then you might experience
+issues with the DTLS portion. Go to examples/shared and remove the
+tinydtls and clone tinydtls again as above. Better is to avoid a ``make
+clean``.
 
 
 ## Wamaama objects
@@ -191,3 +196,21 @@ Run the 'gen_data' separately. In practice, such a script will read your real se
 The following images shows the concept:
 
 ![Alt text](images/Wakaama-rpi.png?raw=true "Title")
+
+
+## Wakaama example
+
+``SERIALNUMBER=urn:H2O:meter-1``
+
+``./lwm2mclient  -4  -n  ${SERIALNUMBER}  -h  leshan.eclipseprojects.io  -p   5683  -l  14250``
+
+``Check your device on https://leshan.eclipseprojects.io``
+
+
+
+
+
+
+
+
+
