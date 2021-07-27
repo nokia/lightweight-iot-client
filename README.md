@@ -99,6 +99,8 @@ Install the lightweight-iot-client on ``/home/pi``
 
 ``make``
 
+During the ``make``, some compiler warnings may appear but they are not resulting in errors.
+
 When you want to add parameters during compilation, use ``cmake`` with
 ``-D`` parameters. Please refer to the Wakaama distribution for details.
 
@@ -106,10 +108,15 @@ Example:
 
 ``cmake -DLWM2M_BOOTSTRAP=1  -DLOG -DLWM2M_WITH_LOGS -DWITH_LOGS -DLWM2M_VERSION=1.0 -DLWM2M_SUPPORT_SENML_JSON=0 -DLWM2M_SUPPORT_JSON=0 -DDTLS=1 examples/client``
 
-If you would execute a a ``make clean``, then you might experience
-issues with the DTLS portion. Go to examples/shared and remove the
-tinydtls and clone tinydtls again as above. Better is to avoid a ``make
-clean``.
+If you would execute a ``make clean``, then you might experience issues with the DTLS portion. Go to examples/shared and remove the
+tinydtls and clone tinydtls again as above. Better is to avoid a ``make clean``.
+
+
+## The Concept of Sensor, database and the Wakaama client
+
+The following images shows the concept:
+
+![Alt text](images/Wakaama-rpi.png?raw=true "Title")
 
 
 ## Wamaama objects
@@ -181,6 +188,16 @@ If so, the client reads the data and resets the value back to '0'.
 The client will then submit the change to the lwm2m server if there is
 a subscription for this object resource.
 
+Check the file sqlite3/structure_db and see that there is a
+pre-provisioning for all objects and associated with the serial number ``urn:H2O:meter-1``.
+If you want to change this serial number, then edit this file and
+run the script called: ``create_db``. This script will simply do the
+following:
+
+``rm -f database.sqlite3``
+
+``cat structure_db | sqlite3 database.sqlite3``
+
 ## Generate sensor data
 
 In the directory ./python, you will find the script called gen_data.  Edit this
@@ -191,20 +208,52 @@ changes to the database as mentioned in the previous section.
 
 Run the 'gen_data' separately. In practice, such a script will read your real sensors instead of artificial data.
 
-## The Concept of Sensor, database and the Wakaama client
-
-The following images shows the concept:
-
-![Alt text](images/Wakaama-rpi.png?raw=true "Title")
+``./gen_data``
 
 
 ## Wakaama example
+
+Define the serial number. Take the same serial number as what you
+defined in the ./python script and the sqlite3 database settings.
 
 ``SERIALNUMBER=urn:H2O:meter-1``
 
 ``./lwm2mclient  -4  -n  ${SERIALNUMBER}  -h  leshan.eclipseprojects.io  -p   5683  -l  14250``
 
 ``Check your device on https://leshan.eclipseprojects.io``
+
+
+## Differences with the official Wakaama distribution
+
+The difference of this client compared to the official Wakaama
+distribution is that this client has pre-defined objects for Water
+Meters. The Objects (the .c files) are generated out of a text file
+providing the required details.  It fairly easy to update the object
+input file and to create other object for example to make a Smart
+Meter or Energy Meter.
+
+For more details read the file lightweight-iot-client/examples/client/README.
+
+## Disclaimer
+
+Note that this verion is a frozen Wakaama client (since July 20, 2021). 
+Please take note that Wakaama is continuously  subject of change and as a consequence, 
+this client version may become out of date over time. 
+
+The recommendation is to take notice 'how' this client has been updated
+with the original Wakaama software as source. It comes down in adding
+object files in examples/client/., update the Make-files, and a change
+in the lwm2mclient.c and  lwm2mclient.h to add the objects. 
+
+
+
+
+
+
+
+
+
+
 
 
 
