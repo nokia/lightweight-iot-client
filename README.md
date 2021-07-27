@@ -81,24 +81,31 @@ LWM2M_CLIENT_MODE and LWM2M_SERVER_MODE can be defined at the same time.
 
 ## Build Examples
 
- * Create a build directory and change to that, i.e.  cd  /home/pi/lightweight-iot-client
+Install the lightweight-iot-client on ``/home/pi``
 
- * ``cmake ./examples/client``
- * ``make``
- * ``./lwm2mclient [Options]``
+``git clone https://github.com/nokia/lightweight-iot-client.git``
 
-DTLS feature requires the tinydtls submodule. To include it, on the first run,
-use the following commands to retrieve the sources:
- * ``git submodule init``
- * ``git submodule update``
+``cd lightweight-iot-client``
 
-You need to install autoconf and automake to build with tinydtls.
+``cd examples/shared``
 
-Build with tinydtls:
- * Create a build directory and change to that.
- * ``cmake -DDTLS=1 ./examples/client``
- * ``make``
- * ``./lwm2mclient [Options]``
+``mv tinydtls org-tinydtls``
+
+``git clone https://github.com/eclipse/tinydtls.git``
+
+``cd ../..``
+
+``cmake  ./examples/client``
+
+``make``
+
+or when you want to add parameters for compilation, see the following as an example.  Please refer to the Wakaama distribution for details.
+
+cmake -DLWM2M_BOOTSTRAP=1  -DLOG -DLWM2M_WITH_LOGS -DWITH_LOGS -DLWM2M_VERSION=1.0 -DLWM2M_SUPPORT_SENML_JSON=0 -DLWM2M_SUPPORT_JSON=0 -DDTLS=1 examples/client
+
+If you would execute a a make clean, then you might experience issues with the DTLS portion. Go to examples/shared and remove the tinydtls and clone tinydtls again as above.
+
+
 
 ## Wamaama objects
 
