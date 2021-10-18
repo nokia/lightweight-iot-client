@@ -1,0 +1,64 @@
+# Start the Wakaama client
+#
+# do_launchpad <serialnumber>
+#
+
+if [ "$1" = "" ]
+then
+echo "Usage: do_launchpad <serialnumber>"
+echo ""
+echo "Example: do_launchpad urn:SKU:xiot-4000"
+exit
+fi
+echo ""
+
+# Device identity
+SERIALNBR=$1
+
+# Local port
+LOCALPORT=$((14000+`shuf -i 1-1000 -n 1`))
+
+# PSK/PSK-ID
+DTLSPSKIDENTITY=abcabcabcabc121212
+DTLSPSKSECRETKEY=0a0a0a0ab0b0b0b0
+
+# Convert to base64 and to hex ascii
+DTLSPSKSECRETB64=`echo -n $DTLSPSKSECRETKEY | base64`
+DTLSPSKSECRETKEY=`echo -n $DTLSPSKSECRETKEY | xxd -p`
+
+# Verbose
+echo "--- This is what you need to fill in on the IMPACT UI : $DTLSPSKSECRETB64"
+echo "--- This is what we use for the PSK/PSK-ID Secret Key : $DTLSPSKSECRETKEY"
+echo
+
+# Observe parameter (seconds) this is the frequency that Wakaama reports a changed value. Do not set this too high.
+OBSERVEUPD=8
+
+# Server address and port
+SERVERADDR=impact.idc.nokia.com
+
+# Make this a secure connection y/n
+SECURE=y
+
+echo "DTLSPSKIDENTITY = $DTLSPSKIDENTITY"
+echo "DTLSPSKSECRETKEY = $DTLSPSKSECRETKEY"
+
+# Compose the command
+if [ "$SECURE" = "y" ]
+then
+SERVERPORT=30001
+CMD="./lwm2mclient -4 -n $SERIALNBR -h $SERVERADDR -p $SERVERPORT -l $LOCALPORT -o $OBSERVEUPD -i $DTLSPSKIDENTITY -s $DTLSPSKSECRETKEY"
+else
+SERVERPORT=30000
+CMD="./lwm2mclient -4 -n $SERIALNBR -h $SERVERADDR -p $SERVERPORT -l $LOCALPORT -o $OBSERVEUPD"
+fi
+
+# Verbose
+echo ""
+echo "$CMD"
+echo ""
+
+# Execute the constructed command
+$CMD
+
+#echo -n "MGEwYTBhMGFiMGIwYjBiMA==" | base64 --decode | od -t x1
