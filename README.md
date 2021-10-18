@@ -42,6 +42,11 @@ On a Raspberry-Pi clone the git to /home/pi
 
 ### Dependencies and Tools
 
+It is recommended that when using a Raspberry Pi, that it should be updated with the latest packages. You should be a super user to do this.
+
+  - apt update
+  - apt full-upgrade
+
 Add the following software on the R-Pi:
 
   - apt-get update -y
@@ -222,6 +227,16 @@ defined in the ./python script and the sqlite3 database settings.
 
 ``Check your device on https://leshan.eclipseprojects.io``
 
+## Target deployment
+
+For a more real world deployment it is necessary to set parameters for the URL of the server and secrets used for security the connection.
+This script support Pre-shared key type security.
+
+To make the file executable do this:
+chmod +x do_launchpad
+
+Run the script with the serial number as an argument for example:
+./do_launchpad urn:H2O:meter-1
 
 ## Differences with the official Wakaama distribution
 
