@@ -1,7 +1,7 @@
-# Wakaama
+# Lightweight Client
 
 Wakaama (formerly liblwm2m) is an implementation of the Open Mobile
-Alliance's LightWeight M2M protocol (LWM2M).
+Alliance's LightWeight M2M protocol (LWM2M). Waakama is a major part of this client. For debugging purposes the Leshan server is also used.
 
 Use the official GIT of Wakaama to do your development. This GIT
 provides a Wakaama version with predefined objects for water meters
@@ -215,6 +215,7 @@ Run the 'gen_data' separately. In practice, such a script will read your real se
 
 ``./gen_data``
 
+This can be run in the background to be constantly updated data.
 
 ## Wakaama example
 
@@ -225,7 +226,7 @@ defined in the ./python script and the sqlite3 database settings.
 
 ``./lwm2mclient  -4  -n  ${SERIALNUMBER}  -h  leshan.eclipseprojects.io  -p   5683  -l  14250``
 
-``Check your device on https://leshan.eclipseprojects.io``
+``Check your device on https://leshan.eclipseprojects.io for a quick test of operation``
 
 ## Target deployment
 
