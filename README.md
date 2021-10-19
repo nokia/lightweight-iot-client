@@ -1,4 +1,8 @@
-# Lightweight Client
+# Linux Lightweight IoT Client
+
+The Lightweight Client is for use within Devices that can interwork with Nokia product for Device Management.
+
+The Lightweight Client is for Linux. For the purposes of compatibility the use main commands below have been tested on Raspbian which is for the Raspberry Pi.
 
 Wakaama (formerly liblwm2m) is an implementation of the Open Mobile
 Alliance's LightWeight M2M protocol (LWM2M). Waakama is a major part of this client. For debugging purposes the Leshan server is also used.
@@ -38,16 +42,16 @@ client.
 
 ## Installation
 
-On a Raspberry-Pi clone the git to /home/pi
+On Raspbian clone the git to /home/pi
 
 ### Dependencies and Tools
 
-It is recommended that when using a Raspberry Pi, that it should be updated with the latest packages. You should be a super user to do this.
+It is recommended that when using Raspbian, that it should be updated with the latest packages. You should be a super user to do this.
 
   - apt update
   - apt full-upgrade
 
-Add the following software on the R-Pi:
+Add the following software on the Raspbian:
 
   - apt-get update -y
   - apt-get install cmake
@@ -84,7 +88,7 @@ Several compilation switches are used:
 Depending on your platform, you need to define LWM2M_BIG_ENDIAN or LWM2M_LITTLE_ENDIAN.
 LWM2M_CLIENT_MODE and LWM2M_SERVER_MODE can be defined at the same time.
 
-## Build Examples
+## Build Examples for Rasbian
 
 Install the lightweight-iot-client on ``/home/pi``
 
